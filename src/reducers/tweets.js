@@ -8,8 +8,6 @@ export default function tweets(state = {}, action) {
                 ...action.tweets
             }
         default:
-            return {
-                state
-            }
+            return state
     }
 }
