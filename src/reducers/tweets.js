@@ -17,7 +17,8 @@ export default function tweets(state = {}, action) {
             }
         case ADD_TWEET:
             const { tweet } = action;
-            const replyingTo = {};
+            let replyingTo = {};
+            
             if (tweet.replyingTo !== null) {
                 replyingTo = {
                     [tweet.replyingTo]: {
